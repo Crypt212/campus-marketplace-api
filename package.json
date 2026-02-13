@@ -1,0 +1,33 @@
+{
+  "name": "campus-market",
+  "version": "1.0.0",
+  "description": "student-to-student market place to buy and rent used tools",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.0",
+    "@prisma/client": "^7.4.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^8.0.0",
+    "nodemon": "^3.1.11",
+    "pg": "^8.18.0",
+    "prisma": "^7.4.0",
+    "redis": "^5.10.0",
+    "winston": "^3.19.0",
+    "ws": "^8.19.0"
+  }
+}

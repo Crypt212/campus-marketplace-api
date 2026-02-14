@@ -5,6 +5,7 @@ const nodeEnv = process.env.NODE_ENV || 'development';
 const backend = {
     port: parseInt(process.env.PORT, 10),
 }
+
 const frontend = {
     url: process.env.FRONTEND_URL,
 }
@@ -28,6 +29,10 @@ const jwt = {
     refreshToken: {
         secret: process.env.JWT_REFRESH_SECRET,
         expiresIn: process.env.JWT_REFRESH_EXPIRES_IN || '7d',
+    },
+    resetToken: {
+        secret: process.env.JWT_RESET_SECRET,
+        expiresIn: process.env.JWT_RESET_EXPIRES_IN || '1h',
     }
 };
 

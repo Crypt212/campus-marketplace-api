@@ -138,6 +138,16 @@ model Listing {
 
     orders  Order[]
     reviews Review[]
+
+    // Indexes for performance
+    @@index([category])
+    @@index([price])
+    @@index([createdAt])
+    @@index([ownerId])
+    @@index([isAvailable])
+    @@index([listingType])
+    @@index([category, isAvailable])
+    @@index([createdAt, isAvailable])
 }
 
 model Order {

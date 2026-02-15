@@ -1,4 +1,4 @@
-import { Prisma } from "../libs/prisma/client/client.js";
+import { Prisma } from "../libs/prisma/client.js";
 import { ConflictError, NotFoundError } from "../errors/errors.js";
 
 export const handlePrismaError = (error) => {

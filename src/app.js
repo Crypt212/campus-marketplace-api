@@ -2,6 +2,7 @@ import express from "express";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import mainRouter from "./routes/api.js";
 import { globalErrorHandler } from "./middlewares/errorMiddleware.js";
 import redisClient from "./libs/redis.js";
@@ -12,6 +13,7 @@ const initApp = async () => {
   const app = express();
 
   app.use(express.json());
+  app.use(cookieParser());
   app.use(helmet());
   app.use(
     rateLimit({
